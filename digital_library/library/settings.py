@@ -35,6 +35,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
+    'library',
 ]
 
 MIDDLEWARE = [
@@ -72,26 +74,12 @@ WSGI_APPLICATION = 'library.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'djongo',
-        'ENFORCE_SCHEMA': True,
-        'LOGGING': {
-            'version': 1,
-            'loggers': {
-                'djongo': {
-                    'level': 'DEBUG',
-                    'propogate': False,
-                }
-            },
-        },
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'db',
-        'CLIENT': {
-            'host': 'localhost',
-            'port': 27018,
-            'username': 'admin',
-            'password': '12345678',
-            'authSource': 'the_database',
-            'authMechanism': 'SCRAM-SHA-256'
-        }
+        'USER': 'postgres',
+        'HOST': '127.0.0.1',
+        'HOST': '127.0.0.1',
+        'PORT': '5433',
     }
 }
 
@@ -130,3 +118,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+LOGIN_REDIRECT_URL = '/'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
