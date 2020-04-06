@@ -6,9 +6,5 @@ def index(request):
     return HttpResponse("Hello, world. You're at the test index.")
 
 
-def home(request):
-    return render(request, 'mysite/home.html')
-
-
-def login(request):
-    return None
+# def home(request):
+#     return render(request, 'mysite/home.html')
