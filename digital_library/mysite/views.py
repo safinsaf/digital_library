@@ -7,4 +7,8 @@ def index(request):
 
 
 def home(request):
-    return render(request, 'library/home.html')
+    return render(request, 'mysite/home.html')
+
+
+def login(request):
+    return None
