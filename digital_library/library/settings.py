@@ -24,7 +24,7 @@ SECRET_KEY = '50y!c+^!&l48cmuo*^sx^hykb0145t7fdz!_(vk9m%(j7jepep'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.digital-library.com.']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 # Application definition
 
@@ -35,8 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'crispy_forms',
-    'library',
+    'mysite',
 ]
 
 MIDDLEWARE = [
@@ -83,7 +82,6 @@ DATABASES = {
         'NAME': 'db',
         'USER': 'postgres',
         'HOST': '127.0.0.1',
-        'HOST': '127.0.0.1',
         'PORT': '5433',
     }
 }
@@ -129,5 +127,5 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
-LOGIN_REDIRECT_URL = '/'
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+LOGIN_REDIRECT_URL = "home"
+LOGOUT_REDIRECT_URL = "home"
