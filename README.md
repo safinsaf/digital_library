@@ -14,7 +14,7 @@
 
  Postgres:
 ```angular2
-docker run --name=postgres_swp --rm -d -v $(pwd)/postgres_data:/var/lib/postgresql/data -p 5433:5432 -e POSTGRES_HOST_AUTH_METHOD=trust postgres
+docker run --name=postgres_swp -d -v $(pwd)/postgres_data:/var/lib/postgresql/data -p 5433:5432 -e POSTGRES_HOST_AUTH_METHOD=trust postgres
 docker exec -it postgres_swp bash
 psql -U postgres
 CREATE DATABASE db;
