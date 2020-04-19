@@ -1,9 +1,15 @@
 *.pyc
 *~
+*.xml
 __pycache__
 myvenv
 db.sqlite3
 /static
 .DS_Store
 .idea
-.env
+/shelf/
+/workspace.xml
+/dataSources/
+/dataSources.local.xml
+/httpRequests/
+
